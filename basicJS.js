@@ -67,6 +67,5 @@ myComputer.model="Porshi";
 console.log(myComputer.model)
 
 const max = Math.max(23, 99, 65, 21, 34);
-const arrayOfDigits = [1,2,3,4,5];
-const maxInArray = Mth.max(...arrayOfDigits)
+const maxInArray = Math.max(...numbers)
 console.log(maxInArray)
