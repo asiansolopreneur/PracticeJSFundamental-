@@ -76,3 +76,100 @@ const blacks = products.filter(product => product.color == 'pink');
 
 const whiteItem = products.find(product => product.color == 'black');
 console.log(whiteItem);
+
+
+
+// JavaScripts Objects Concepts.....
+
+// Create object Using class
+
+class Vehicle {
+
+    constructor(name,age,income) {
+        this .name =name;
+        this.age = age;
+        this.income = income;
+    }
+}
+
+const newCar = new Vehicle("BMW", 1971, 200)
+console.log(newCar.income);
+
+//Using Method in Object 
+
+const student = {
+    id: 101,
+    money: 5000,
+    name: 'RJ Kibria',
+    major: 'mathematics',
+    isRich: false,
+    subjects: ['english', 'economics', 'math 101', 'calculus'],
+    bestFriend: {
+        name: 'kundu',
+        major: 'mathematics'
+    },
+    treatDey: function (expense, boksis) {
+        this.money = this.money - expense - boksis;
+        return this.money;
+    }
+}
+const remaining2 = student.treatDey(500, 50);
+console.log(remaining2);
+
+
+// Object properties and keys
+
+const bottle = {
+    color: 'yellow',
+    hold: 'water',
+    price: 50,
+    isCleaned: true
+};
+// getting all properties names
+const keys = Object.keys(bottle);
+// console.log(keys);
+// get all values 
+const values = Object.values(bottle);
+// console.log(values);
+const pairs = Object.entries(bottle);
+// console.log(pairs);
+// Object.seal(bottle);
+Object.freeze(bottle);
+bottle.price = 100;
+bottle.height = 16;
+delete bottle.isCleaned;
+console.log(bottle);
+
+
+// Loop in Object
+
+const bottle = {
+    color: 'yellow',
+    hold: 'water',
+    price: 50,
+    isCleaned: true
+};
+/* 
+for(let i = 0; i<10;i++){}
+for(const num of numbers){} // array
+for(const prop in student){} // object
+*/
+for (const prop in bottle) {
+    // console.log(prop, bottle[prop]);
+}
+
+const keys = Object.keys(bottle);
+// console.log(keys);
+for (const prop of keys) {
+    // console.log(prop, bottle[prop]);
+}
+
+// advanced
+const entries = Object.entries(bottle);
+// console.log(entries);
+// const [key, value] = ['color', 'yellow'];
+for (const [key, value] of Object.entries(bottle)) {
+    console.log(key, value);
+}
+
+// 

@@ -82,10 +82,10 @@ function displayResult(batas){
 
    }
 
-   
+
 // Single Product Information [Api Action]
 
-const displayMealDetails = mealDetails =>{
+const displayMealDetails = mealDetails => {
    //console.log(mealDetails);
    const mealdescription= document.getElementById("meal-detailss");
          mealdescription.textContent="";
